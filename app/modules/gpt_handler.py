@@ -8,7 +8,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def get_response(prompt):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # or "gpt-3.5-turbo"
+            model="gpt-4o-mini",  # or "gpt-3.5-turbo"
             messages=[
                 {"role": "system", "content": "You are Amadeus, a helpful assistant."},
                 {"role": "user", "content": prompt}

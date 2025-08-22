@@ -11,8 +11,11 @@ def run_assistant():
     speak("Hello! How can I assist you today?")
     while True: 
        user_input = transcribe() #bug no response after transcribe
+       #get the ai to respind to the user input
+       ai_response = get_response(user_input)
        if "exit" in user_input.lower():
            speak("Goodbye!")
            break
-       response = get_response(user_input)
-    speak(response)
+       speak(ai_response)
+      # response = get_response(user_input)
+    
